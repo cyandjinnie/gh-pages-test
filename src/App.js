@@ -25,6 +25,7 @@ class App extends React.Component {
 
   getInitialState() {
     return {
+      id: 1,
       CharDesc: "",
       CharName: "",
       CharStartLine: "",
@@ -270,7 +271,7 @@ class App extends React.Component {
 
     console.log("Sent")
 
-    let text = event.target.value
+    let text = this.state.ChatInput
     let reply = await APIClient.GetReplyFromCharacter(this.state.id, text, this.state.PlayerName)
 
     this.parseReply(reply)

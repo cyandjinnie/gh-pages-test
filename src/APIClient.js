@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost:8000/api/";
+const baseUrl = "https://r4xp4nhmja.execute-api.eu-west-2.amazonaws.com/default/processMVPEvent";
 
 const Fetch = function(url, init) {
     let headers
@@ -19,8 +19,10 @@ const Fetch = function(url, init) {
     return fetch(`${baseUrl}${url}`, { ...init, headers })
 }
 
-const APIRequest = async function(method, body) {
-    const http_response = await Fetch(method + "/", {
+const APIRequest = async function(body) {
+    let method = body["method"]
+
+    const http_response = await Fetch("", {
         method: "POST",
         headers: {
             "Content-Type": "Application/json",
@@ -49,23 +51,33 @@ const APIRequest = async function(method, body) {
 const APIClient = (function() {
     return {
         NewCharacter: function(id, desc) {
-            return APIRequest("new_character", JSON.stringify({ id, desc }))
+            let method = "new_character"
+            let params = [id, desc]
+            return APIRequest(JSON.stringify({ method, params }))
         },
 
         ChangeMood: function(id, new_mood) {
-            return APIRequest("change_mood", JSON.stringify({ id, new_mood }))
+            let method = "change_mood"
+            let params = [id, new_mood]
+            return APIRequest(JSON.stringify({ method, params }))
         },
 
         TriggerEvent: function(id, event_desc, attitude) {
-            return APIRequest("trigger_event", JSON.stringify({ id, event_desc, attitude }))
+            let method = "trigger_event"
+            let params = [id, event_desc, attitude]
+            return APIRequest(JSON.stringify({ method, params }))
         },
 
         GetReplyFromCharacter: function(id, user_message, user_name) {
-            return APIRequest("request_reply", JSON.stringify({ id, user_message, user_name }))
+            let method = "request_reply"
+            let params = [id, user_message, user_name]
+            return APIRequest(JSON.stringify({ method, params }))
         },
 
         CreateUserSession: function() {
-            return APIRequest("create_user_session", "")
+            let method = "create_user_session"
+            let params = []
+            return APIRequest(JSON.stringify({ method, params }))
         },
 
         
