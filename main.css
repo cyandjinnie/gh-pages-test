@@ -1,7 +1,9 @@
-#body-container {
-    margin-top: 50px;
-}
-
 #body-container-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  #body-container {
     margin-top: 50px;
-}
+    width: 1000px;
+  }
