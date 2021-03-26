@@ -1,5 +1,5 @@
 {
-    "list": ["courtney", "trevor", "landa"],
+    "list": ["courtney", "trevor", "amellie"],
     "npcs":
     {
         "courtney": {
@@ -14,11 +14,17 @@
             "description": "Trevor has been described as a difficult person to deal with: extreme, impetuous, vengeful, psychopathic, unhinged, unpredictable, untamed, infamous, homicidal, and prone to violent outbursts and destructive rampages. He does everything in a sociopathic and relentless manner",
             "line": "This piece of shit that was the cause of my misery, a completely worthless individual"
         },
-        "landa": {
-            "name": "Landa",
-            "full-name": "Hans Landa",
-            "description": "Hans Landa is a Colonel in the SS tasked with locating Jews in hiding in Occupied France. He’s fluent in multiple languages, but beneath the educated, polite and even charming veneer is a cruel and sadistic man. While he takes great pride in his work, he acts entirely out of self-interest, as the story demonstrates. This time he is interrogating Marcel who is possibly hiding jews inside his house.",
-            "line": "Hello, mr. Mercel"
+        "amelie": {
+            "name": "Amelie",
+            "full-name": "Amelie",
+            "description": "Amelie is lovely and delightful. She is nice-looking and adorable. Amelie loves everyone. She takes care of everyone.",
+            "line": "Hello, my friend!"
+        },
+        "gollum": {
+            "name": "Gollum",
+            "full-name": "Gollum",
+            "description": "Gollum is a greedy goblin. Gollum is rude and unpleasant. He loves gold. Gollum's task is to guard the castle.",
+            "line": "What do you want, stranger?"
         }
     }
 }
